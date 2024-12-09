@@ -8,7 +8,7 @@ Este proyecto implementa un pipeline para **crear formularios de manera automát
 
 ### Datos de Entrada
 - **Fuente de datos:** Se espera que los datos estén almacenados en **Google Drive**, en formato **CSV**.
-- **Plantillas:** Se requiere una plantilla para definir los elementos y el orden del formulario. Estas plantillas deben estar en un documento de **Google Sheets**. Una plantilla base está incluida en el repositorio ([enlace a la plantilla](#)).
+- **Plantillas:** Se requiere una plantilla para definir los elementos y el orden del formulario. Estas plantillas deben estar en un documento de **Google Sheets**. Una plantilla base está incluida en el repositorio ([plantilla](https://github.com/juan-oviedo/PipelineEvaluacion/blob/main/Plantillas%20base.xlsx)) o tambien puede ser copiada desde google drive ([plantilla](https://docs.google.com/spreadsheets/d/1yl5lK5cGzug3yfYEGMTln4CMZOXq02QuPy-ypOfnOEU/edit?usp=sharing))
 
 ### Flujo de Trabajo
 1. Configuración de un proyecto en Google Apps Script.
@@ -21,7 +21,7 @@ Este proyecto implementa un pipeline para **crear formularios de manera automát
 ## Instrucciones de Instalación y Ejecución
 
 ### 1. Configuración de Google Apps Script
-1. Abre el archivo `AppsScript.js` del repositorio.
+1. Abre el archivo `AppsScript.js` del repositorio o abre el [proyecto compartido](https://script.google.com/d/1u8th30fFVn_hVTFRnDdnn-CFR5B16ZYIMiM_Xka4Bz9IwwgWx5l8Ht4W/edit?usp=sharing).
 2. Ve a [Google Apps Script](https://script.google.com/home).
 3. Crea un nuevo proyecto:
    - Haz clic en "Nuevo proyecto".  
