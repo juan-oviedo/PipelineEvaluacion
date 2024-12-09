@@ -82,7 +82,7 @@ Las contribuciones son bienvenidas. Si deseas mejorar este pipeline, por favor a
 ---
 
 ## Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está licenciado bajo los términos de la [MIT License](./LICENSE).
 
 ---
 
