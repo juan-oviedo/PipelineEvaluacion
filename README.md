@@ -25,22 +25,31 @@ Este proyecto implementa un pipeline para **crear formularios de manera automát
 2. Ve a [Google Apps Script](https://script.google.com/home).
 3. Crea un nuevo proyecto:
    - Haz clic en "Nuevo proyecto".  
-     **![Imagen 1]()**
+     ![Crear nuevo proyecto en Apps Script](imagenes/nuevo_proyecto.png)
    - Copia y pega el contenido de `AppsScript.js` en el editor.  
-     **![Imagen 2]()**
-
-4. Implementa el proyecto:
+     ![Pegar contenido](imagenes/pegar_contenido.png)
+     
+4. Guardar el proyecto:
+   ![Guardar Proyecto](imagenes/guardar_proyecto.png)
+   
+5. Implementa el proyecto:
    - Haz clic en **Implementar** y selecciona **Nueva implementación**.  
-     **![Imagen 3]()**
+     ![Implementar proyecto](imagenes/nueva_implementacion.png)
    - Configura los siguientes parámetros:
      - **Tipo:** Aplicación web  
-       **![Imagen 4]()**
+       ![Seleccionar Aplicacion Web](imagenes/seleccionar_aplicacion_web.png)
      - **Descripción:** Ej. "Creación de Formulario"
      - **Ejecutar como:** Tú mismo (el usuario actual).
      - **Acceso:** Cualquier usuario.  
-       **![Imagen 5]()**
-   - Haz clic en **Implementar** y copia el URL generado.  
-     **![Imagen 6]()**
+       ![Configuraciones de implementacion](imagenes/configuraciones.png)
+   - Haz clic en **Implementar**, Seguramente google solicitara permisos para el acceso:  
+     ![Autorizar acceso](https://github.com/juan-oviedo/PipelineEvaluacion/blob/main/imagenes/autorizar_acceso.png)
+   - Luego Google Le solicitara que seleccione el usuario, al seleccionar va a salir una ventana como esta, en la cual hay que ir a avanzado y seleccionar ir al proyecto:
+     
+     ![Google no pudo verificar la aplicacion](imagenes/autorizar_acceso_1.png)
+   - Luego le va a pedir que autorize los persmisos
+   - Una vez autorizado deberia salir una ventana con esta, en la cual podemos copiar el URL:
+     ![Finalizacion de implementacion](imagenes/finalizacion_implementacion.png)
 
 ### 2. Rellenar datos basicos en Google Colab
 1. Abre el notebook de Google Colab asociado al pipeline:  
