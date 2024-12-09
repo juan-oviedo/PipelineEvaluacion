@@ -1,6 +1,6 @@
 function doGet(e) {
   // Retrieve parameters from the GET request
-  const folderName = e.parameter.folderName
+  const folderPath = e.parameter.folderName
   const fileName = e.parameter.fileName;
   const formName = e.parameter.formName;
   const title = e.parameter.title;
@@ -13,7 +13,7 @@ function doGet(e) {
   console.log('Parameters received: %s', JSON.stringify(e.parameter));
 
   // Call your Aplication function with the parameters
-  const result = Aplication(folderName, fileName, formName, title, descipcion, formId, startElement, stopElement);
+  const result = Aplication(folderPath, fileName, formName, title, descipcion, formId, startElement, stopElement);
 
   // Return the URL and form ID as JSON
   return ContentService.createTextOutput(JSON.stringify(result))
@@ -31,15 +31,15 @@ function debug (){
   startElement = 0;
   stopElement = 9;
   Logger.log("prueba");
-  const result = Aplication(folderName, fileName, formName, title, descipcion, formId, startElement, stopElement);
+  const result = Aplication(folderPath, fileName, formName, title, descipcion, formId, startElement, stopElement);
 }
 
-function Aplication(folderName, fileName, formName, title, descipcion, formId, startElement, stopElement) {
+function Aplication(folderPath, fileName, formName, title, descipcion, formId, startElement, stopElement) {
 
   const csvData = readCSV(fileName);
   const elementList = parseCSV(csvData, '¬', '~');
 
-  const result = createOrOpenForm(folderName, formName, title, descipcion, elementList, formId, startElement, stopElement);
+  const result = createOrOpenForm(folderPath, formName, title, descipcion, elementList, formId, startElement, stopElement);
   return result;
 }
 
@@ -94,15 +94,32 @@ function parseCSV(data, colDelimiter, rowDelimiter){
   return parsedData;
 }
 
-function createOrOpenForm(folderName, nombre, titulo, descripcion, listaElementos, formId, startElement, stopElement) {
-  const folders = DriveApp.getFoldersByName(folderName);
-  let folder;
+function getFolderByPath(folderPath) {
+  // Split the folderPath into individual folder names
+  const folderNames = folderPath.split('/');
   
-  if (folders.hasNext()) {
-    folder = folders.next();  // Get the first folder with the specified name
-  } else {
-    Logger.log('Folder not found');
-    throw new Error("No se encontro una carpeta con nombre" + folderName);
+  // Start from the root folder
+  let currentFolder = DriveApp.getRootFolder();
+  
+  for (let i = 0; i < folderNames.length; i++) {
+    const folderIterator = currentFolder.getFoldersByName(folderNames[i]);
+    if (folderIterator.hasNext()) {
+      currentFolder = folderIterator.next();
+    } else {
+      throw new Error(`Folder not found: ${folderNames[i]} in path ${folderPath}`);
+    }
+  }
+  
+  return currentFolder;
+}
+
+function createOrOpenForm(folderPath, nombre, titulo, descripcion, listaElementos, formId, startElement, stopElement) {
+  let folder;
+  try {
+    folder = getFolderByPath(folderPath);
+    Logger.log("Folder found: " + folder.getName());
+  } catch (e) {
+    Logger.log(e.message);
   }
 
   let form;
@@ -120,7 +137,7 @@ function createOrOpenForm(folderName, nombre, titulo, descripcion, listaElemento
     DriveApp.getFileById(form.getId()).moveTo(folder);
   }
 
-   // Start adding elements from the specified index
+    // Start adding elements from the specified index
   listaElementos.slice(startElement).forEach((item, index) => {
     const originalIndex = startElement + index;
     if (originalIndex > stopElement) {
