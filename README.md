@@ -64,7 +64,7 @@ En la sección **3) Personalización y funciones** del notebook, puedes ajustar 
 - Cambiar el formato de los paquetes de datos.
 
 ### 4. Generación de Formularios
-Primero hace falta seleccionar una columna de los datos a utilizar, o  varias columnas en caso de haber personalizado el pipeline
+Primero hace falta seleccionar una columna de los datos a utilizar, o  varias columnas en caso de haber personalizado el pipeline.
 ![seleccion de columnas](imagenes/seleccion_de_columnas.png)
 
 Luego si se puede ejecutar completa la sección **4) Pipeline** para generar los formularios. Al finalizar, obtendrás un archivo **CSV** con los formularios listos para ser asignados a los evaluadores.
