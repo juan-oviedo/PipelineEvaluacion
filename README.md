@@ -8,7 +8,7 @@ Este proyecto implementa un pipeline para **crear formularios de manera automát
 
 ### Datos de Entrada
 - **Fuente de datos:** Se espera que los datos estén almacenados en **Google Drive**, en formato **CSV**.
-- **Plantillas:** Se requiere una plantilla para definir los elementos y el orden del formulario. Estas plantillas deben estar en un documento de **Google Sheets**. Una plantilla base está incluida en el repositorio ([plantilla](https://github.com/juan-oviedo/PipelineEvaluacion/blob/main/Plantillas%20base.xlsx)) o tambien puede ser copiada desde google drive ([plantilla](https://docs.google.com/spreadsheets/d/1yl5lK5cGzug3yfYEGMTln4CMZOXq02QuPy-ypOfnOEU/edit?usp=sharing))
+- **Plantillas:** Se requiere una plantilla para definir los elementos y el orden del formulario. Estas plantillas deben estar en un documento de **Google Sheets**. Una plantilla base está incluida en el repositorio `Plantillas_base.xlsx` o tambien puede ser copiada desde google drive ([plantilla](https://docs.google.com/spreadsheets/d/1yl5lK5cGzug3yfYEGMTln4CMZOXq02QuPy-ypOfnOEU/edit?usp=sharing))
 
 ### Flujo de Trabajo
 1. Configuración de un proyecto en Google Apps Script.
@@ -64,7 +64,10 @@ En la sección **3) Personalización y funciones** del notebook, puedes ajustar 
 - Cambiar el formato de los paquetes de datos.
 
 ### 4. Generación de Formularios
-Ejecuta la sección **4) Pipeline** para generar los formularios. Al finalizar, obtendrás un archivo **CSV** con los formularios listos para ser asignados a los evaluadores.
+Primero hace falta seleccionar una columna de los datos a utilizar, o  varias columnas en caso de haber personalizado el pipeline
+![seleccion de columnas](imagenes/seleccion_de_columnas.png)
+
+Luego si se puede ejecutar completa la sección **4) Pipeline** para generar los formularios. Al finalizar, obtendrás un archivo **CSV** con los formularios listos para ser asignados a los evaluadores.
 
 ---
 
