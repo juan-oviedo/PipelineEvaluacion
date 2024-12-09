@@ -55,7 +55,7 @@ Este proyecto implementa un pipeline para **crear formularios de manera automát
 1. Abre el notebook de Google Colab asociado al pipeline:  
    [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juan-oviedo/PipelineEvaluacion/blob/main/Pipeline.ipynb).
 2. Rellena los campos requeridos en las secciones iniciales del notebook.  
-   **![Imagen 7]()**
+   ![Informacion basica](imagenes/relleno_de_informacion.png)
 
 ### 3. Personalización del Formulario (Opcional)
 En la sección **3) Personalización y funciones** del notebook, puedes ajustar el pipeline según tus necesidades:
