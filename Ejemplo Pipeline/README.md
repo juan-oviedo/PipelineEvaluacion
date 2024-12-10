@@ -7,7 +7,7 @@ Este ejemplo utiliza un pequeño dataset con textos en inglés. Se toman **10 te
 ## Archivos Incluidos
 
 ### 1. Copia de `Pipeline.ipynb`
-Esta es una copia de la notebook del pipeline principal, adaptada para este ejemplo.
+Esta es una copia de la notebook del pipeline principal, adaptada para este ejemplo. Tambien se puede acceder con este [link](https://script.google.com/d/1UCOMAWc8WzM6L8pdtKByfcOWjqr5YMa6lRDc3pDrA-9LFf9GmVqXuCpR/edit?usp=sharing)
 
 #### Cambios realizados:
 - **Rellenado de campos necesarios:**
